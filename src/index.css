@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Outfit:wght@100..900&family=Roboto+Mono:wght@100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: outfit, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.app {
+  width: 80%;
+  margin: auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Light mode variables */
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f5f5f5;
+  --gradient-bg: linear-gradient(135deg, #ff7a18, #af002d 70%);
+}
+
+/* Dark mode variables */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1f1f1f;
+  --gradient-bg: linear-gradient(135deg, #1a1a1a, #333333 70%);
+}
+
+/* Base styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Gradient background using CSS variable */
+.gradient-background {
+  background: var(--gradient-bg);
+  transition: background 0.3s ease;
+}
+
+body.light {
+  --sign-in-gradient: linear-gradient(135deg, #ff7a18, #af002d 70%);
+  --sign-in-shadow: rgba(175, 0, 45, 0.4);
+  --sign-in-shadow-hover: rgba(175, 0, 45, 0.6);
+}
+
+body.dark {
+  --sign-in-gradient: linear-gradient(135deg, #1a1a1a, #333333 70%);
+  --sign-in-shadow: rgba(255, 255, 255, 0.2);
+  --sign-in-shadow-hover: rgba(255, 255, 255, 0.3);
+}
